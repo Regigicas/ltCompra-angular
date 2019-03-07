@@ -1,0 +1,70 @@
+{
+    "categorias":
+    [
+        {
+            "id": 0,
+            "nombre": "Pasta"
+        },
+        {
+            "id": 1,
+            "nombre": "Lácteos"
+        },
+        {
+            "id": 2,
+            "nombre": "Fruta"
+        },
+        {
+            "id": 3,
+            "nombre": "Frutos secos"
+        }
+    ],
+    "alimentos":
+    [
+        {
+            "id": 0,
+            "nombreProducto": "Nombre producto",
+            "nombreFabricante": "Nombre fabricante",
+            "alergenos": [ 0, 1, 2 ],
+            "imgPath": "img/img_0.png"
+        },
+        {
+            "id": 1,
+            "nombreProducto": "Nombre producto1",
+            "nombreFabricante": "Nombre fabricante1",
+            "alergenos": [ 1, 3, 5 ],
+            "imgPath": "img/img_1.png"
+        }
+    ],
+    "listado": [ 0, 1 ],
+    "usuario":
+    {
+        "nombre": "José María Moreno"
+    },
+    "alergenos":
+    [
+        {
+            "id": 0,
+            "img": "imgs/lacteos.png"
+        },
+        {
+            "id": 1,
+            "img": "imgs/sesamo.png"
+        },
+        {
+            "id": 2,
+            "img": "imgs/cacahuetes.png"
+        },
+        {
+            "id": 3,
+            "img": "imgs/cereales.png"
+        },
+        {
+            "id": 4,
+            "img": "imgs/huevos.png"
+        },
+        {
+            "id": 5,
+            "img": "imgs/frutos_secos.png"
+        }
+    ]
+}
