@@ -13,6 +13,13 @@ import { ProductoCategoriaComponent } from './componentes/producto-categoria/pro
 import { ProductoDetailComponent } from './componentes/producto-detail/producto-detail.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { AlergenoComponent } from './componentes/alergeno/alergeno.component';
+import { BottomComponent } from './componentes/bottom/bottom.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
+import { AlimentoCarritoComponent } from './componentes/alimento-carrito/alimento-carrito.component';
+import { CodigoBarrasManualComponent } from './componentes/codigo-barras-manual/codigo-barras-manual.component';
+import { CodigoBarrasComponent } from './componentes/codigo-barras/codigo-barras.component';
+import { RegistroProductoComponent } from './componentes/registro-producto/registro-producto.component';
+import { AlergenosCheckBoxComponent } from './componentes/alergenos-check-box/alergenos-check-box.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,14 @@ import { AlergenoComponent } from './componentes/alergeno/alergeno.component';
     ProductoCategoriaComponent,
     ProductoDetailComponent,
     CabeceraComponent,
-    AlergenoComponent
+    AlergenoComponent,
+    BottomComponent,
+    CarritoComponent,
+    AlimentoCarritoComponent,
+    CodigoBarrasManualComponent,
+    CodigoBarrasComponent,
+    RegistroProductoComponent,
+    AlergenosCheckBoxComponent
   ],
   imports: [
     BrowserModule,

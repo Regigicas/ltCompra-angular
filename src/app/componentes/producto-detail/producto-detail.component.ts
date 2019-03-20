@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AlimentosService } from 'src/app/servicios/alimentos.service';
+import { CarritoService } from 'src/app/servicios/carrito.service';
 
 @Component({
   selector: 'app-producto-detail',
@@ -13,7 +14,8 @@ export class ProductoDetailComponent implements OnInit
     alimento;
 
     constructor(private params: ActivatedRoute,
-        private alimentosService: AlimentosService)
+        private alimentosService: AlimentosService,
+        private carritoService: CarritoService)
     {
         this.idProducto = params.snapshot.paramMap.get("id");
         this.alimentosService.getAlimentoPorId(this.idProducto).subscribe((data: any) =>
@@ -23,4 +25,9 @@ export class ProductoDetailComponent implements OnInit
     }
 
     ngOnInit() {}
+
+    addACarrito()
+    {
+        //this.carritoService.addProducto(idProducto);
+    }
 }

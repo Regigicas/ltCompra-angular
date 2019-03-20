@@ -1,0 +1,11 @@
+<div class="container mb-5">
+    <h2 class="text-center">Lista de la compra</h2>
+
+    <app-alimento-carrito *ngFor="let producto of carrito" [producto]=producto
+        (productoElegido)="borrarProducto($event)"></app-alimento-carrito>
+
+    <div class="text-center">
+        <button *ngIf="carrito && carrito.length > 0" type="button" class="btn mt-2 btn-primary" (click)="borrarTodo()">Borrar listado</button>
+        <button *ngIf="!carrito || carrito.length == 0" type="button" class="btn mt-2 btn-primary disabled">Borrar listado</button>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<nav class="nav nav-fill border-top border-primary navbackcolor fixed-bottom" *ngIf="this.router.url != '/login'">
+    <a *ngIf="this.router.url != '/home'" class="nav-item nav-link border-right border-light clickMouse" (click)="clickBack()"><i class="fas fa-long-arrow-alt-left img_cabeza"></i></a>
+    <a *ngIf="this.router.url == '/home'" class="nav-item nav-link border-right border-light disabled cursorNormal" [routerLink]=""><i class="fas fa-long-arrow-alt-left pocoVisible"></i></a>
+
+    <a *ngIf="this.router.url != '/home'" class="nav-item nav-link" [routerLink]="['/home']"><i class="fas fa-home"></i></a>
+    <a *ngIf="this.router.url == '/home'" class="nav-item nav-link disabled navbackcolorActive cursorNormal" [routerLink]=""><i class="fas fa-home pocoVisible"></i></a>
+
+    <a *ngIf="this.router.url != '/carrito'" class="nav-item nav-link border-left border-light" [routerLink]="['/carrito']"><i class="fas fa-list-alt"></i></a>
+    <a *ngIf="this.router.url == '/carrito'" class="nav-item nav-link border-left border-light disabled navbackcolorActive cursorNormal" [routerLink]=""><i class="fas fa-list-alt pocoVisible"></i></a>
+</nav>

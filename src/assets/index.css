@@ -141,3 +141,8 @@
 {
     margin-left: -3%;
 }
+
+.cursorNormal
+{
+    cursor: default
+}

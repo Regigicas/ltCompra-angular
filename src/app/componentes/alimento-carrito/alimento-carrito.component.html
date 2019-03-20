@@ -1,0 +1,16 @@
+<div class="card mx-auto limitelateral mt-2 text-center">
+    <div class="container-fluid"> 
+        <div class="row"> 
+            <div class="col-4">
+                <img src="/assets/{{producto.imgPath}}" alt="Imagen del producto" class="imagen-item-peque"/>
+            </div>
+            <div class="col-6 mt-4">
+                <h4 class="card-title">{{producto.nombreProducto}}</h4>
+                <p class="card-text">{{producto.nombreFabricante}}</p>
+            </div>
+            <div class="col-2 text-center marginAuto">
+                <button class="fas fa-trash-alt clickMouse fa-border btn-danger" (click)="clickBorrar()"></button>
+            </div>
+        </div> 
+    </div>
+</div>
