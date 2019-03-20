@@ -1,0 +1,255 @@
+{
+    "categorias":
+    [
+        {
+            "id": 0,
+            "nombre": "Pasta"
+        },
+        {
+            "id": 1,
+            "nombre": "Lácteos"
+        },
+        {
+            "id": 2,
+            "nombre": "Fruta"
+        },
+        {
+            "id": 3,
+            "nombre": "Frutos secos"
+        }
+    ],
+    "alimentos":
+    [
+        {
+            "id": 0,
+            "nombreProducto": "Nombre producto",
+            "nombreFabricante": "Nombre fabricante",
+            "alergenos":
+            [
+                {
+                    "id": 0,
+                    "texto": "Alergeno lacteo",
+                    "img": "imgs/lacteos.png"
+                },
+                {
+                    "id": 1,
+                    "texto": "Alergeno altramuces",
+                    "img": "imgs/altramuces.png"
+                },
+                {
+                    "id": 2,
+                    "texto": "Alergeno apio",
+                    "img": "imgs/apio.png"
+                }
+            ],
+            "imgPath": "imgs/img_0.png",
+            "categoria":
+            {
+                "id": 0,
+                "nombre": "Pasta"
+            }
+        },
+        {
+            "id": 1,
+            "nombreProducto": "Nombre producto1",
+            "nombreFabricante": "Nombre fabricante1",
+            "alergenos":
+            [
+                {
+                    "id": 1,
+                    "texto": "Alergeno altramuces",
+                    "img": "imgs/altramuces.png"
+                },
+                {
+                    "id": 3,
+                    "texto": "Alergeno cacahuetes",
+                    "img": "imgs/cacahuetes.png"
+                },
+                {
+                    "id": 5,
+                    "texto": "Alergeno crustaceos",
+                    "img": "imgs/crustaceos.png"
+                }
+            ],
+            "imgPath": "imgs/img_1.png",
+            "categoria":
+            {
+                "id": 1,
+                "nombre": "Lácteos"
+            }
+        },
+        {
+            "id": 2,
+            "nombreProducto": "Nombre producto2",
+            "nombreFabricante": "Nombre fabricante2",
+            "alergenos":
+            [
+                {
+                    "id": 1,
+                    "texto": "Alergeno altramuces",
+                    "img": "imgs/altramuces.png"
+                },
+                {
+                    "id": 3,
+                    "texto": "Alergeno cacahuetes",
+                    "img": "imgs/cacahuetes.png"
+                },
+                {
+                    "id": 6,
+                    "texto": "Alergeno frutos secos",
+                    "img": "imgs/frutos_secos.png"
+                }
+            ],
+            "imgPath": "imgs/img_2.png",
+            "categoria":
+            {
+                "id": 0,
+                "nombre": "Pasta"
+            }
+        }
+    ],
+    "listado":
+    [
+        {
+            "id": 0,
+            "nombreProducto": "Nombre producto",
+            "nombreFabricante": "Nombre fabricante",
+            "alergenos":
+            [
+                {
+                    "id": 0,
+                    "texto": "Alergeno lacteo",
+                    "img": "imgs/lacteos.png"
+                },
+                {
+                    "id": 1,
+                    "texto": "Alergeno altramuces",
+                    "img": "imgs/altramuces.png"
+                },
+                {
+                    "id": 2,
+                    "texto": "Alergeno apio",
+                    "img": "imgs/apio.png"
+                }
+            ],
+            "imgPath": "imgs/img_0.png",
+            "categoria":
+            {
+                "id": 0,
+                "nombre": "Pasta"
+            }
+        },
+        {
+            "id": 1,
+            "nombreProducto": "Nombre producto1",
+            "nombreFabricante": "Nombre fabricante1",
+            "alergenos":
+            [
+                {
+                    "id": 1,
+                    "texto": "Alergeno altramuces",
+                    "img": "imgs/altramuces.png"
+                },
+                {
+                    "id": 3,
+                    "texto": "Alergeno cacahuetes",
+                    "img": "imgs/cacahuetes.png"
+                },
+                {
+                    "id": 5,
+                    "texto": "Alergeno crustaceos",
+                    "img": "imgs/crustaceos.png"
+                }
+            ],
+            "imgPath": "imgs/img_1.png",
+            "categoria":
+            {
+                "id": 1,
+                "nombre": "Lácteos"
+            }
+        }
+    ],
+    "usuario":
+    {
+        "nombre": "José María Moreno",
+        "email": "regigicas@hotmail.es"
+    },
+    "alergenos":
+    [
+        {
+            "id": 0,
+            "texto": "Alergeno lacteo",
+            "img": "imgs/lacteos.png"
+        },
+        {
+            "id": 1,
+            "texto": "Alergeno altramuces",
+            "img": "imgs/altramuces.png"
+        },
+        {
+            "id": 2,
+            "texto": "Alergeno apio",
+            "img": "imgs/apio.png"
+        },
+        {
+            "id": 3,
+            "texto": "Alergeno cacahuetes",
+            "img": "imgs/cacahuetes.png"
+        },
+        {
+            "id": 4,
+            "texto": "Alergeno cereales",
+            "img": "imgs/cereales.png"
+        },
+        {
+            "id": 5,
+            "texto": "Alergeno crustaceos",
+            "img": "imgs/crustaceos.png"
+        },
+        {
+            "id": 6,
+            "texto": "Alergeno frutos secos",
+            "img": "imgs/frutos_secos.png"
+        },
+        {
+            "id": 7,
+            "texto": "Alergeno huevos",
+            "img": "imgs/huevos.png"
+        },
+        {
+            "id": 8,
+            "texto": "Alergeno lacteos",
+            "img": "imgs/lacteos.png"
+        },
+        {
+            "id": 9,
+            "texto": "Alergeno moluscos",
+            "img": "imgs/moluscos.png"
+        },
+        {
+            "id": 10,
+            "texto": "Alergeno mostaza",
+            "img": "imgs/mostaza.png"
+        },
+        {
+            "id": 11,
+            "texto": "Alergeno pescados",
+            "img": "imgs/pescados.png"
+        },
+        {
+            "id": 12,
+            "texto": "Alergeno sesamo",
+            "img": "imgs/sesamo.png"
+        },
+        {
+            "id": 13,
+            "texto": "Alergeno soja",
+            "img": "imgs/soja.png"
+        },
+        {
+            "id": 14,
+            "texto": "Alergeno sulfitos",
+            "img": "imgs/sulfitos.png"
+        }
+    ]
+}

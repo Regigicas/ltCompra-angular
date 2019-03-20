@@ -1,0 +1,143 @@
+.navbackcolor
+{
+    background-color: #d6d6d6;
+}
+
+.navbackcolorActive
+{
+    background-color: #b9b9b9;
+}
+
+.limitelateral
+{
+    margin: auto;
+    width: 80%;
+}
+
+.imagen-item
+{
+    max-height: 300px;
+    width: 100%;
+}
+
+.imagen-item-peque
+{
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+}
+
+.img_cabeza
+{
+    color: #007bff;
+}
+
+.clickMouse:hover
+{
+    cursor: pointer;
+}
+
+.clickMouse:hover i
+{
+    color: #004186;
+    cursor: pointer;
+}
+
+.centrarIcono
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+}
+
+.vh-100
+{
+    min-height: 100vh;
+}
+
+.vh-30
+{
+    min-height: 30vh;
+}
+
+.vh-15
+{
+    min-height: 15vh;
+}
+
+.vh-80
+{
+    min-height: 80vh;
+}
+
+.width-100
+{
+    width: 100%;
+}
+
+.fixEspacio
+{
+    white-space: normal;
+}
+
+.navbar-centrado
+{
+    width: 100%;
+    text-align: center;
+}
+
+.fuenteReducida
+{
+    font-size: 70%;
+}
+
+.pocoVisible
+{
+    opacity: 0.4;
+}
+
+.listaSinPuntos
+{
+    list-style-type: none;
+}
+
+.imagen-50
+{
+    width: 70%;
+    height: 70%;
+}
+
+.spanBlock
+{
+    display: inline-block;
+}
+
+.marginAuto
+{
+    margin: auto;
+}
+
+.centrarLink
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fuenteOscura
+{
+    font-weight: bold;
+}
+
+.margenIzquierdo
+{
+    margin-left: 3%;
+}
+
+.margenIzquierdoMenos
+{
+    margin-left: -3%;
+}

@@ -1,0 +1,14 @@
+<div class="card mx-auto limitelateral mt-2">
+    <div class="container-fluid"> 
+        <div class="row"> 
+            <div class="col-4">
+                <img src="/assets/{{alimento.imgPath}}" alt="Imagen del producto" class="imagen-item-peque"/>
+            </div>
+            <div class="col-8 mt-2 text-center">
+                <h5 class="card-title">{{ alimento.nombreProducto }}</h5>
+                <p class="card-text">{{ alimento.nombreFabricante }}</p>
+                <button (click)="irProducto()" class="btn btn-primary fixEspacio mb-2 fuenteReducida">Información del producto</button>
+            </div>
+        </div> 
+    </div>
+</div>
