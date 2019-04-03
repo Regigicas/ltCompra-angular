@@ -1,10 +1,10 @@
 <h2 class="text-center">Registrar producto</h2>
 
 <div class="container mb-5">
-    <div class="row">
+    <form class="row" #registrarProducto="ngForm" (ngSubmit)="clickRegistrar(registrarProducto.value)">
         <div class="col-12 text-center mt-2">
             <h4>Código de barras:</h4>
-            <input type="text" name="codBarra" class="form-control" placeholder="xxxxxxxxxx"/>
+            <input type="number" name="codBarra" class="form-control" placeholder="xxxxxxxxxx" ngModel/>
         </div>
         <div class="col-12 mt-4 text-center">
             <h4>Imagen del producto</h4>
@@ -12,19 +12,29 @@
         </div>
         <div class="col-12 mt-4 text-center">
             <h4>Nombre del producto:</h4>
-            <input type="text" name="nombreProducto" placeholder="Nombre del producto" class="form-control"/>
+            <input type="text" name="nombreProducto" placeholder="Nombre del producto" class="form-control" ngModel/>
         </div>
         <div class="col-12 mt-4 text-center">
             <h4>Fabricante del producto:</h4>
-            <input type="text" name="fabricante" placeholder="Fabricante del producto" class="form-control"/>
+            <input type="text" name="nombreFabricante" placeholder="Fabricante del producto" class="form-control" ngModel/>
+        </div>
+        <div class="col-12 mt-4 text-center">
+            <h4>Categoría del producto:</h4>
+            <select name="catId" placeholder="Categoria" class="form-control" ngModel>
+                <option disabled selected value> Selecciona una opción </option>
+                <option *ngFor="let categoria of categorias" value="{{categoria.id}}">{{categoria.nombre}}</option>
+            </select>
         </div>
         <div class="col-12 mt-4 mb-2">
             <h4>Alérgenos del producto:</h4>
-            <app-alergenos-check-box *ngFor="let alergeno of alergenos" [alergeno]=alergeno></app-alergenos-check-box>
+            <ng-container *ngFor="let alergeno of alergenos">
+                <input type="checkbox" name="alergenoChk" value="{{alergeno.id}}" [(ngModel)]="alergeno.checked"><span class="spanBlock margenIzquierdo"><img src="/assets/{{alergeno.img}}" class="mt-1 imagen-50"
+                    alt="{{alergeno.text}}"/></span><br>
+            </ng-container>
         </div>
-    </div>
 
-    <div class="text-center">
-        <button type="button" class="btn mt-2 btn-primary" (click)="clickRegistrar()">Registrar</button>
-    </div>
+        <div class="mx-auto">
+            <button type="submit" class="btn mt-2 btn-primary">Registrar</button>
+        </div>
+    </form>
 </div>

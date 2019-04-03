@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,6 @@ import { AlimentoCarritoComponent } from './componentes/alimento-carrito/aliment
 import { CodigoBarrasManualComponent } from './componentes/codigo-barras-manual/codigo-barras-manual.component';
 import { CodigoBarrasComponent } from './componentes/codigo-barras/codigo-barras.component';
 import { RegistroProductoComponent } from './componentes/registro-producto/registro-producto.component';
-import { AlergenosCheckBoxComponent } from './componentes/alergenos-check-box/alergenos-check-box.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +38,13 @@ import { AlergenosCheckBoxComponent } from './componentes/alergenos-check-box/al
     AlimentoCarritoComponent,
     CodigoBarrasManualComponent,
     CodigoBarrasComponent,
-    RegistroProductoComponent,
-    AlergenosCheckBoxComponent
+    RegistroProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

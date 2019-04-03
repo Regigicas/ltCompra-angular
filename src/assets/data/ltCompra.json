@@ -22,6 +22,7 @@
     [
         {
             "id": 0,
+            "codBarras": 12345,
             "nombreProducto": "Nombre producto",
             "nombreFabricante": "Nombre fabricante",
             "alergenos":
@@ -51,6 +52,7 @@
         },
         {
             "id": 1,
+            "codBarras": 54954,
             "nombreProducto": "Nombre producto1",
             "nombreFabricante": "Nombre fabricante1",
             "alergenos":
@@ -80,6 +82,7 @@
         },
         {
             "id": 2,
+            "codBarras": 430343,
             "nombreProducto": "Nombre producto2",
             "nombreFabricante": "Nombre fabricante2",
             "alergenos":
@@ -112,6 +115,7 @@
     [
         {
             "id": 0,
+            "codBarras": 12345,
             "nombreProducto": "Nombre producto",
             "nombreFabricante": "Nombre fabricante",
             "alergenos":
@@ -141,6 +145,7 @@
         },
         {
             "id": 1,
+            "codBarras": 54954,
             "nombreProducto": "Nombre producto1",
             "nombreFabricante": "Nombre fabricante1",
             "alergenos":

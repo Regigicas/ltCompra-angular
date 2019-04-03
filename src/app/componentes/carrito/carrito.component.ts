@@ -23,7 +23,7 @@ export class CarritoComponent implements OnInit
     borrarTodo()
     {
         this.carrito = [];
-        //this.carritoService.borrarProductos();
+        this.carritoService.borrarProductos();
     }
 
     borrarProducto(producto)
@@ -32,7 +32,7 @@ export class CarritoComponent implements OnInit
         if (index !== -1)
         {
             this.carrito.splice(index, 1);
-            //this.carritoService.borrarProducto(producto.id);
+            this.carritoService.borrarProducto(producto.id);
         }
     }
 }

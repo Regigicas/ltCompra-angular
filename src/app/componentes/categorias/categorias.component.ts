@@ -24,10 +24,9 @@ export class CategoriasComponent implements OnInit
             this.categoria = data;
         });
         this.alimentosService.getAlimentosPorCategoria(this.idCategoria).subscribe((data) =>
-            {
-                this.alimentos = data;
-            }
-        );
+        {
+            this.alimentos = data;
+        });
     }
 
     ngOnInit() {}
