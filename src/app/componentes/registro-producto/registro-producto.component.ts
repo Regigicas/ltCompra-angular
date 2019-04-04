@@ -3,6 +3,7 @@ import { AlergenosService } from 'src/app/servicios/alergenos.service';
 import { FormGroup } from '@angular/forms';
 import { CategoriasService } from 'src/app/servicios/categorias.service';
 import { AlimentosService } from 'src/app/servicios/alimentos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-producto',
@@ -16,7 +17,8 @@ export class RegistroProductoComponent implements OnInit
     
     constructor(private alergenosService: AlergenosService,
         private categoriasService: CategoriasService,
-        private alimentosService: AlimentosService)
+        private alimentosService: AlimentosService,
+        private router: Router)
     {
         this.alergenosService.obtenerAlergenos().subscribe((data: any) =>
         {
@@ -66,6 +68,9 @@ export class RegistroProductoComponent implements OnInit
         if (!this.alimentosService.addAlimento(newProducto))
             alert("¡Ya existe un producto con ese código de barras!");
         else
+        {
             alert("¡Producto regisrtado con exito!");
+            this.router.navigate(["/producto-detail", newProducto.codBarras]);
+        }
     }
 }
