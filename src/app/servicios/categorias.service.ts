@@ -11,18 +11,13 @@ export class CategoriasService
 
     obtenerCategorias()
     {
-        const url = "/assets/data/ltCompra.json";
-        return this.http.get(url).pipe(
-            map((result: any) => result.categorias)
-        );
+        const url = "http://127.0.0.1:8080/api/categorias";
+        return this.http.get(url).pipe();
     }
 
     obtenerCategoriaPorId(catId: number)
     {
-        const url = "/assets/data/ltCompra.json";
-        return this.http.get(url).pipe(
-            map((result: any) => result.categorias
-            .filter((data: any) => data.id == catId)[0])
-        );
+        const url = `http://127.0.0.1:8080/api/categorias/${catId}`;
+        return this.http.get(url).pipe();
     }
 }

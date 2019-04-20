@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col-12 text-center">
-            <form action="#">
+            <form action="#" #buscarProducto="ngForm" (ngSubmit)="buscarCodBarras(buscarProducto.value)">
                 <h3>Introducir codigo de barras manualmente</h3>
-                <input type="text" name="codBarra" class="form-control" placeholder="Codigo de barras"><br>
-                <button type="submit" class="btn btn-lg btn-primary" (click)="buscarCodBarras()">Buscar</button>
+                <input type="number" name="codBarra" class="form-control" placeholder="Codigo de barras" ngModel><br>
+                <button type="submit" class="btn btn-lg btn-primary">Buscar</button>
             </form>
         </div>
     </div>

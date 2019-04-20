@@ -8,59 +8,37 @@ import { of } from 'rxjs';
 })
 export class AlimentosService
 {
-    private cachedData = null;
     constructor(private http: HttpClient) {}
 
     getAlimentosPorCategoria(idCategoria: number)
     {
-        if (this.cachedData != null)
-            return of(this.cachedData.filter((data) =>
-            {
-                return data.categoria.id == idCategoria;
-            }));
-
-        this.cachedData = [];
-        const url = "/assets/data/ltCompra.json";
+        const url = "http://127.0.0.1:8080/api/alimentos";
         return this.http.get(url).pipe(
             map((result: any) =>
             {
-                this.cachedData = result.alimentos;
-                return result.alimentos.
+                return result.
                     filter((data: any) =>  data.categoria.id == idCategoria);
             }));
     }
 
     getAlimentoPorId(idAli: number)
     {
-        if (this.cachedData != null)
-            return of(this.cachedData.filter((data) =>
-            {
-                return data.id == idAli;
-            })[0]);
-
-        this.cachedData = [];
-        const url = "/assets/data/ltCompra.json";
-        return this.http.get(url).pipe(
-            map((result: any) =>
-            {
-                this.cachedData = result.alimentos;
-                return result.alimentos.
-                    filter((data: any) => data.id == idAli)[0];
-            }));
+        const url = `http://127.0.0.1:8080/api/alimentos/${idAli}`;
+        return this.http.get(url).pipe();
     }
 
     private existeProducto(id)
     {
-        for (var i in this.cachedData)
+        /*for (var i in this.cachedData)
             if (this.cachedData[i].id == id)
-                return true;
+                return true;*/
 
         return false;
     }
 
     addAlimento(alimento)
     {            
-        if (this.cachedData == null)
+        /*if (this.cachedData == null)
         {
             this.cachedData = [];
             const url = "/assets/data/ltCompra.json";
@@ -75,7 +53,7 @@ export class AlimentosService
         if (this.existeProducto(alimento.id))
             return false;
 
-        this.cachedData.push(alimento);
+        this.cachedData.push(alimento);*/
         return true;
     }
 }

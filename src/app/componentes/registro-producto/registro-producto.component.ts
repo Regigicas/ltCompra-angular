@@ -44,6 +44,7 @@ export class RegistroProductoComponent implements OnInit
         {
             return ale.checked;
         });
+        
         var formCategoria = this.categorias.filter((cat) =>
         {
             return cat.id == data.catId;

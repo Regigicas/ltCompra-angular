@@ -17,6 +17,6 @@ export class ProductoCategoriaComponent implements OnInit
 
     irProducto()
     {
-        this.router.navigate(["/producto-detail", this.alimento.id])
+        this.router.navigate(["/producto-detail", this.alimento.codBarras])
     }
 }

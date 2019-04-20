@@ -46,8 +46,8 @@
             "imgPath": "imgs/img_0.png",
             "categoria":
             {
-                "id": 0,
-                "nombre": "Pasta"
+                "id": 5,
+                "nombre": "Cereales y derivados"
             }
         },
         {
@@ -223,36 +223,31 @@
         },
         {
             "id": 8,
-            "texto": "Alergeno lacteos",
-            "img": "imgs/lacteos.png"
-        },
-        {
-            "id": 9,
             "texto": "Alergeno moluscos",
             "img": "imgs/moluscos.png"
         },
         {
-            "id": 10,
+            "id": 9,
             "texto": "Alergeno mostaza",
             "img": "imgs/mostaza.png"
         },
         {
-            "id": 11,
+            "id": 10,
             "texto": "Alergeno pescados",
             "img": "imgs/pescados.png"
         },
         {
-            "id": 12,
+            "id": 11,
             "texto": "Alergeno sesamo",
             "img": "imgs/sesamo.png"
         },
         {
-            "id": 13,
+            "id": 12,
             "texto": "Alergeno soja",
             "img": "imgs/soja.png"
         },
         {
-            "id": 14,
+            "id": 13,
             "texto": "Alergeno sulfitos",
             "img": "imgs/sulfitos.png"
         }

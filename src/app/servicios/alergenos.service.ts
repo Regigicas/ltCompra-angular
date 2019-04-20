@@ -11,9 +11,7 @@ export class AlergenosService
     
     obtenerAlergenos()
     {
-        const url = "/assets/data/ltCompra.json";
-        return this.http.get(url).pipe(
-            map((result: any) => result.alergenos)
-        );
+        const url = "http://127.0.0.1:8080/api/alergenos";
+        return this.http.get(url).pipe();
     }
 }
