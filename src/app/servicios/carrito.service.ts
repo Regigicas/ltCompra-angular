@@ -8,62 +8,56 @@ import { of } from 'rxjs';
 })
 export class CarritoService
 {
-    private cachedData = null;
     constructor(private http: HttpClient) {}
-
-    initIfEmpty()
-    {
-        if (this.cachedData == null)
-            this.obtenerCarrito().subscribe();
-    }
 
     obtenerCarrito()
     {
-        if (this.cachedData != null)
-            return of(this.cachedData);
-
-        this.cachedData = [];
-        const url = "/assets/data/ltCompra.json";
+        const url = "http://127.0.0.1:8080/api/carrito";
         return this.http.get(url).pipe(
             map((result: any) =>
             {
-                this.cachedData = result.listado;
-                return result.listado;
+                return result.carrito ? result.carrito : result;
             })
         );
     }
 
     borrarProducto(id)
     {
-        if (this.cachedData == null)
-            return;
-
-        this.cachedData = this.cachedData.filter((item) =>
-        {
-            return item.id != id;
-        });
+        const url = `http://127.0.0.1:8080/api/carrito/${id}`;
+        this.http.delete(url).subscribe();
     }
 
     borrarProductos()
     {
-        this.cachedData = [];
+        const url = "http://127.0.0.1:8080/api/carrito";
+        this.http.delete(url).subscribe();
     }
 
-    addProducto(producto)
+    private doPost(codBarras)
     {
-        if (this.productoExists(producto.id))
-            return false;
-            
-        this.cachedData.push(producto);
-        return true;
+        const url = "http://127.0.0.1:8080/api/carrito";
+        this.http.post(url, { codBarras: codBarras }).subscribe();
     }
 
-    productoExists(id)
+    addProducto(codBarras)
     {
-        for (var i in this.cachedData)
-            if (this.cachedData[i].id == id)
-                return true;
+        return this.tryGetProducto(codBarras).then((result) =>
+        {
+            if (result)
+                return false;
 
-        return false;
+            this.doPost(codBarras);
+            return true;
+        }).catch((err) =>
+        {
+            this.doPost(codBarras);
+            return true;
+        });
+    }
+
+    tryGetProducto(codBarras)
+    {
+        const url = `http://127.0.0.1:8080/api/carrito/${codBarras}`;
+        return this.http.get(url).toPromise();
     }
 }

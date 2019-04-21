@@ -58,20 +58,26 @@ export class RegistroProductoComponent implements OnInit
             "nombreFabricante": data.nombreFabricante,
             "alergenos": [],
             "imgPath": "imgs/img_0.png",
-            "categoria": formCategoria
+            "categoria": formCategoria.id
         };
 
         formAlergenos.forEach(element =>
         {
-            newProducto.alergenos.push(element);
+            newProducto.alergenos.push(element.id);
         });
 
-        if (!this.alimentosService.addAlimento(newProducto))
-            alert("¡Ya existe un producto con ese código de barras!");
-        else
+        this.alimentosService.addAlimento(newProducto).then((val) =>
         {
-            alert("¡Producto regisrtado con exito!");
-            this.router.navigate(["/producto-detail", newProducto.codBarras]);
-        }
+            if (!val)
+                alert("¡Ya existe un producto con ese código de barras!");
+            else
+            {
+                alert("¡Producto registrado con exito!");
+                setTimeout(function()
+                {
+                    this.router.navigate(["/producto-detail", newProducto.codBarras]);
+                }.bind(this), 1000);
+            }
+        });
     }
 }

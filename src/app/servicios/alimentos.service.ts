@@ -21,39 +21,38 @@ export class AlimentosService
             }));
     }
 
-    getAlimentoPorId(idAli: number)
+    getAlimentoPorId(codBarras: number)
     {
-        const url = `http://127.0.0.1:8080/api/alimentos/${idAli}`;
+        const url = `http://127.0.0.1:8080/api/alimentos/${codBarras}`;
         return this.http.get(url).pipe();
     }
 
-    private existeProducto(id)
+    private tryGetProducto(codBarras)
     {
-        /*for (var i in this.cachedData)
-            if (this.cachedData[i].id == id)
-                return true;*/
+        const url = `http://127.0.0.1:8080/api/alimentos/${codBarras}`;
+        return this.http.get(url).toPromise();
+    }
 
-        return false;
+    private doPost(alimento)
+    {
+        const url = "http://127.0.0.1:8080/api/alimentos";
+        this.http.post(url, alimento).subscribe();
     }
 
     addAlimento(alimento)
-    {            
-        /*if (this.cachedData == null)
+    {
+        return this.tryGetProducto(alimento.codBarras).then((result) =>
         {
-            this.cachedData = [];
-            const url = "/assets/data/ltCompra.json";
-            this.http.get(url).pipe(
-                map((result: any) =>
-                {
-                    this.cachedData.push.apply(this.cachedData, result.alimentos);
-                    return result.alimentos;
-                })).subscribe();
-        }
+            if (result)
+                return false;
 
-        if (this.existeProducto(alimento.id))
-            return false;
-
-        this.cachedData.push(alimento);*/
-        return true;
+            this.doPost(alimento);
+            return true;
+        })
+        .catch((err) =>
+        {
+            this.doPost(alimento);
+            return true;
+        });
     }
 }

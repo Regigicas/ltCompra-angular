@@ -19,12 +19,17 @@ export class ProductoDetailComponent implements OnInit
         private alimentosService: AlimentosService,
         private carritoService: CarritoService)
     {
-        this.carritoService.initIfEmpty();
         this.idProducto = params.snapshot.paramMap.get("id");
         this.alimentosService.getAlimentoPorId(this.idProducto).subscribe((data: any) =>
         {
             this.alimento = data;
-            this.showExists = this.carritoService.productoExists(this.alimento.id);
+            this.carritoService.tryGetProducto(this.alimento.codBarras).then((res) =>
+            {
+                this.showExists = res != null;
+            }).catch((err) =>
+            {
+                this.showExists = false;
+            });
         });
     }
 
@@ -32,8 +37,10 @@ export class ProductoDetailComponent implements OnInit
 
     addACarrito()
     {
-        if (this.carritoService.addProducto(this.alimento))
-            this.showRegistered = true;
+        this.carritoService.addProducto(this.alimento.codBarras).then((res) =>
+        {
+            this.showRegistered = res;
+        });
 
         this.showExists = true;
     }
