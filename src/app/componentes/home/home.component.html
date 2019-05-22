@@ -1,14 +1,14 @@
 <div class="container mt-4">
-    <div class="row">
+    <form class="row" #registrarProducto="ngForm" (ngSubmit)="clickBuscar(registrarProducto.value)">
         <div class="col-10">
-            <input type="text" class="search-query form-control" placeholder="Buscar"/>
+            <input type="text" class="search-query form-control" placeholder="Buscar" ngModel name="buscador"/>
         </div>
         <div class="col-2 marginAuto margenIzquierdoMenos">
-            <button type="button" class="">
+            <button type="submit" class="button">
                 <span class="fa fa-search fa-2x"></span>
             </button>
         </div>
-    </div>
+    </form>
     <div class="row btn-group vh-30 mt-5">
         <div class="col-6 mt-1">
             <a [routerLink]="['/codigo']" class="btn btn-primary btn-block btn-lg fixEspacio vh-15 centrarLink fuenteOscura">Escanear código de barras</a>

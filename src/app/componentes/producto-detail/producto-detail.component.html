@@ -9,8 +9,8 @@
                 <p>{{alimento.nombreFabricante}}</p>
                 <button *ngIf="!showExists" type="button" class="btn btn-primary mb-2" (click)="addACarrito()">Añadir lista compra</button>
                 <button *ngIf="showExists" type="button" class="btn btn-primary disabled mb-2">Añadir lista compra</button>
-                <p *ngIf="showExists && !showRegistered"><b>¡El producto ya esta en la lista de la compra!</b></p>
-                <p *ngIf="showRegistered"><b>¡Se ha añadido el producto a la lista de la compra!</b></p>
+                <p *ngIf="showExists && !showRegistered" class="doubleFont"><b>¡El producto ya esta en la lista de la compra!</b></p>
+                <p *ngIf="showRegistered" class="doubleFont"><b>¡Se ha añadido el producto a la lista de la compra!</b></p>
             </div>
         </div>
     </div>

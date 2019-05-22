@@ -55,4 +55,10 @@ export class AlimentosService
             return true;
         });
     }
+
+    getAlimentoPorNombre(nombre: string)
+    {
+        const url = `http://127.0.0.1:8080/api/alimentos_nombre?term=${nombre}`;
+        return this.http.get(url).pipe();
+    }
 }
